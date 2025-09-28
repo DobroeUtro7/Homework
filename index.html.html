@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>goit-markup-hw-02</title>
+  <meta name="description" content="Домашнє завдання №2 — пробний сайт">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --accent: #0077cc;
+      --container-width: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header */
+    .site-header {
+      background: #f9f9f9;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .site-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .main-nav ul {
+      display: flex;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .main-nav a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #eaf4ff;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .main-nav a:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 0;
+      background: linear-gradient(180deg, #fafafa, #ffffff);
+    }
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: 36px;
+      color: var(--accent);
+    }
+    .hero p {
+      margin: 0 0 24px;
+      color: #555;
+    }
+    .hero img {
+      max-width: 100%;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+    }
+    .hero img:hover {
+      transform: scale(1.03);
+    }
+
+    /* About */
+    .about {
+      padding: 80px 0;
+    }
+    .about h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Gallery */
+    .gallery {
+      padding: 80px 0;
+    }
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Contacts */
+    .contacts {
+      padding: 80px 0;
+      margin-top: 40px;
+      border-radius: 12px;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      background: url("179640-sneg-pejzazhi_gor-zima-noch-2560x1440.jpg") no-repeat center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+    .contacts::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .contacts .container {
+      position: relative;
+      z-index: 1;
+    }
+    .contacts h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .contacts p {
+      margin: 8px 0;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 20px 0;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">GOIT</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about">Про проєкт</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Домашнє завдання №2</h1>
+        <p>Приклад тексту на сайті.</p>
+        <img src="179256-zimnee_siyanie-avrora-svalbard-zima-atmosfera-2560x1440.jpg" alt="Головне зображення" />
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>Про проєкт</h2>
+      <p>
+        Це демонстраційний сайт для домашнього завдання №2.  
+        Який містить рандомні зображення та написи.
+      </p>
+    </section>
+
+    <section id="gallery" class="gallery container">
+      <h2>Галерея</h2>
+      <ul class="cards">
+        <li class="card">
+          <img src="179640-sneg-pejzazhi_gor-zima-noch-2560x1440.jpg" alt="Зображення 1" />
+          <h3>Зображення з горами</h3>
+          <p>Зимовий пейзаж</p>
+        </li>
+        <li class="card">
+          <img src="181161-gora-vajshorn-gornyj_relef-gornyj_hrebet-holm-2560x1440.jpg" alt="Зображення 2" />
+          <h3>Гори</h3>
+          <p>Пейзаж на світанку</p>
+        </li>
+        <li class="card">
+          <img src="174677-sneg-zimnij_shtorm-zima-oblako-rastenie-2560x1440.jpg" alt="Зображення 3" />
+          <h3>Зимова хуртовина</h3>
+          <p>Сніжна погода</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <h2>Контакти</h2>
+        <p>Номер телефону: +380198985198</p>
+        <p>Email: <a href="mailto:DomashneZavdannya@gmail.com" style="color:#fff;">DomashneZavdannya@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 goit-markup-hw-02</p>
+    </div>
+  </footer>
+</body>
+</html>
